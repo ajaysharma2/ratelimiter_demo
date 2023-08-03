@@ -1,0 +1,18 @@
+<html xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+<h1>Welcome!</h1>
+<h1 th:inline="text">Hello <span th:remove="tag" sec:authentication="name">thymeleaf</span>!</h1>
+
+<p>Click <a th:href="@{/hello}">here</a> to see a hello greeting.</p>
+
+<p>Click here for test page....<a th:href="@{/test}">here</a></p>
+
+<p>Click here for all customers....<a th:href="@{/customers}">here</a></p>
+
+<p>Click here for all dummy messages....<a th:href="@{/message2}">here</a></p>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity6">
+<head>
+    <meta charset="UTF-8">
+    <title>Customers</title>
+    <link th:href="@{/css/main.css}" rel="stylesheet"/>
+    <script type="text/javascript" th:src="@{/js/main1.js}"></script>
+</head>
+
+
+<body>
+<h1 th:inline="text">Hello <span th:remove="tag" sec:authentication="name">thymeleaf</span>!</h1>
+<h2>Customer List</h2>
+
+<table border="1px" bgcolor="#556b2f">
+    <thead>
+    <tr bgcolor="#808080">
+        <td>Customer Id</td>
+        <td>First Name</td>
+        <td>Last Name</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="customer : ${customers}">
+        <td th:text="${customer.id}">1</td>
+        <td th:text="${customer.firstName}">Text....</td>
+        <td th:text="${customer.lastName}">Text....</td>
+    </tr>
+    </tbody>
+
+</table>
+<br/>
+<div class="center">
+    <h1>Site counter : <span th:text="${counter}"/></h1>
+
+</div>
+</body>
+</html>
+

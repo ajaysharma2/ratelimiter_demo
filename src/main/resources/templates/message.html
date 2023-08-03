@@ -1,0 +1,36 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity6">
+<head>
+    <link th:href="@{/css/main.css}" rel="stylesheet"/>
+    <script type="text/javascript" th:src="@{/js/main1.js}"></script>
+</head>
+<body>
+<h1 th:inline="text">Hello <span th:remove="tag" sec:authentication="name">thymeleaf</span>!</h1>
+<h2>Message List</h2>
+
+<table border="1px" bgcolor="#556b2f">
+    <thead>
+    <tr bgcolor="#808080">
+        <td>Message Id</td>
+        <td>Message Text</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="message : ${messages}">
+        <td th:text="${message.id}">1</td>
+        <td th:text="${message.message}">Text ...</td>
+    </tr>
+    </tbody>
+
+</table>
+<br/>
+
+<div style="background-color: grey; align-content: center">
+    <div style="align-items: center"><h1 style="align-content: center">Site counter</h1></div>
+    <div>
+        <span th:text="${counter}"/>
+    </div>
+</div>
+</body>
+</html>
+

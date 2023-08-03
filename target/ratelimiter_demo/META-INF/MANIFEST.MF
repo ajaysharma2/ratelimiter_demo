@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Created-By: IntelliJ IDEA
+Built-By: asharma11
+Build-Jdk: Eclipse Temurin version 17.0.2
+Implementation-Title: ratelimiter_demo Maven Webapp
+Implementation-Version: 1.0-SNAPSHOT
+Implementation-Vendor-Id: com.atlassian.ratelimiter.demo
+Main-Class: ${start-class}
+
